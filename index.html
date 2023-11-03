@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="" class="logo">
+            </div>
+            <div id="buscar">
+                <form class="form">
+                    <button onclick="buscarSite()">
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <input class="input" id="buscar-input" placeholder="Type your text" required="" oninput="buscarProduto()">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div id="carrinho-icon" onclick="toggleCarrinho">
+                <div class="imagem">
+                    <img src="img/carrinho.png" alt="carrinho">
+                </div>
+                <span id="cont-carrinho">0</span>
+            </div>
+            <div id="carrinho-itens">
+                <ul id="itens-lista"></ul>
+                <span id="preco-total">Total: R$0.00</span>
+                <button id="limparCarrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+        <div class="container">
+            
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Grappler.webp" alt="grappler">
+                        </div>
+                        <div class="infos">
+                            <h3>Grappler</h3>
+                            <p>R$ 200.00</p>
+                            
+<button onclick="addCarrinho('bazuca', 200.00)" class="button">
+    <span class="button__text">Add Item</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+                            
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img class="aug" src="img/aug-a1.webp" alt="aug-a1">
+                        </div>
+                        <div class="infos">
+                            <h3>Aug-a1</h3>
+                            <p>R$ 140,00</p>
+                            
+<button onclick="addCarrinho('Aug-a1', 140.00)" class="button">
+    <span class="button__text">Add Item</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+                            
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/scar-h.png" alt="scar-h">
+                        </div>
+                        <div class="infos">
+                            <h3>Scarlite de Or</h3>
+                            <p>R$ 200,00</p>
+                            
+                            <button onclick="addCarrinho('scar-h', 200.00)" class="button">
+                        <span class="button__text">Add Item</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/pump.png" alt="pump-12">
+                        </div>
+                        <div class="infos">
+                            <h3>Pump-12</h3>
+                            <p>R$ 100.00</p>
+                            
+<button onclick="addCarrinho('Pump-12', 100.00)" class="button">
+    <span class="button__text">Add Item</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+   
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/barret.webp" alt="Barret">
+                        </div>
+                        <div class="infos">
+                            <h3>Barret .50</h3>
+                            <p>R$ 210,00</p>
+                            
+<button onclick="addCarrinho('Barret', 210.00)" class="button">
+    <span class="button__text">Add Item</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/spas-12.png" alt="spas-12">
+                        </div>
+                        <div class="infos">
+                            <h3>Spas-12</h3>
+                            <p>R$ 180,00</p>
+                            
+<button onclick="addCarrinho('spas-12', 180.00)" class="button">
+    <span class="button__text">Add Item</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

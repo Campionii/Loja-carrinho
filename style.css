@@ -1,0 +1,274 @@
+/* Reset CSS */
+
+/* Redefine as margens e preenchimento para zero em todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Redefine a fonte padrão para evitar diferenças de tamanho */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Redefine a aparência de hiperlinks */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Redefine a lista não ordenada (ul) para remover os marcadores */
+ul {
+    list-style: none;
+}
+
+/* Redefine as configurações padrão da lista ordenada (ol) */
+ol {
+    list-style-type: decimal;
+}
+
+
+* {
+    
+    margin:0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+
+    width: 250px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    margin: 0 90px;
+
+}
+
+
+
+#header .container {
+    
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#main .container {
+    flex-direction: column;
+    
+
+}
+
+.produto-linha {
+    display: flex;
+    justify-content: space-between;
+}
+body{
+
+    background: rgb(255,255,255);
+    background: linear-gradient(66deg, rgba(255,255,255,1) 0%, rgba(9,170,249,1) 47%);
+
+}
+
+
+input {
+    border: 2px solid black;
+    padding: 5px 7px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+#carrinho-icon img {
+    width: 50px;
+    height: auto;
+}
+#carrinho-icon{
+    display: flex;
+}
+.produto-img{
+    width: 200px;
+    height: 250px;
+    
+}
+
+.produto{
+    background-color: #F7E142;
+    padding: 40px;
+    border: solid black;
+    border-radius: 8px ;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#cont-carrinho{
+    font-size: 25px;
+}
+
+/*botao estiloso :) */
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button:hover {
+    background: #34974d;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+    
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button:active {
+    border: 1px solid #2e8644;
+  }
+
+  .aug{
+    margin-top: 48px;
+  }
+
+
+  /* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  } 
+
+.remove  {
+    
+    background: #09AAF9;
+    font-size: 20px;
+    color: #F7E142;
+}
+
+.add {
+    background: #09AAF9;
+    font-size: 20px;
+    color: #F7E142;
+}
